@@ -6,10 +6,6 @@ import axios from "axios";
 
 
 
-
-
-
-
 export default function SignupPage() {
     const router = useRouter();
     const [user, setUser] = React.useState({
