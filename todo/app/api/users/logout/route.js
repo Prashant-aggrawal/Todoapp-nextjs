@@ -15,12 +15,7 @@ const response=NextResponse.json(
     
 )
 
-response.cookies.set( "next-auth.session-token","",
-    {
-        httpOnly:true,
-        expires:new Date(0)
-    }
-    )
+
 
     response.cookies.set( "token","",
     {

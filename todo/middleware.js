@@ -16,8 +16,6 @@ export function middleware(request) {
   if (!isPublicPath && !token) {
     return NextResponse.redirect(new URL('/login', request.nextUrl))
   }
-  console.log(isPublicPath)
-  console.log(token)
 }
 
  

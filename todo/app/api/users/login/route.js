@@ -15,9 +15,9 @@ export const POST=async (request) => {
 
         const reqBody=await request.json();
         const{email,password}=reqBody;
-        console.log(reqBody);
+        
 
-        const user = User.findOne(email);
+        const user = await User.findOne({email});
 
 
         if(!user){
@@ -25,9 +25,11 @@ export const POST=async (request) => {
         }
 
         console.log(user);
+        console.log(user.email);
+
 
         const tokenData={
-            id: user.id,
+            id: user._id,
             username: user.username,
             email: user.email
         }
